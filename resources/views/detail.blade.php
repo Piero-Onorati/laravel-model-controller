@@ -13,7 +13,7 @@
 
     {{-- COMIC IMAGE --}}
     <div class="detail_img_box">
-        <img src="{{$comic['thumb']}}" alt=" {{$comic['title']}}">
+        <img src="{{$comic->thumb}}" alt="{{$comic->title}}">
     </div>
 
     {{-- COMIC INFO + ADV --}}
@@ -23,14 +23,14 @@
         <div class="detail_info">
 
             <!-- Title -->
-            <h3>{{$comic['title']}}</h3>
+            <h3>{{$comic->title}}</h3>
 
             <!-- price-box -->
             <div class="price-box">
 
                 <div class="price_book-available">
                     <div class="price_book"> U.S price: 
-                       <span class="price">{{$comic['price']}}</span>
+                       <span class="price">{{$comic->price}} $</span>
                     </div>
                     <span class="available">
                         available
@@ -41,7 +41,7 @@
             </div>
 
             <!-- Description -->
-            <p>{{$comic['description']}}</p>
+            <p>{{$comic->description}}</p>
 
         </div>
 
@@ -54,56 +54,6 @@
 
 </div>
 {{-- end container with main COMIC INFO + ADV --}}
-
-<div class="details_other_info">
-
-    {{-- <div class="details_other_info_box">
-        <div class="talent">
-            <h4>Talent</h4>
-            <ul>
-                <li>
-                    <span class="li-title">
-                        Art by
-                    </span>
-                    <div>
-                        @foreach ($comic['artists'] as $artist)
-                            <span>{{$artist}}</span>
-                        @endforeach 
-                    </div>
-                </li>
-                <li>
-                    <span class="li-title">
-                        Written by
-                    </span>
-                    <div>
-                        @foreach ($comic['writers'] as $writer)
-                            <span>{{$writer}}</span>
-                        @endforeach 
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="spec">
-            <h4>Spec</h4>
-            <ul>
-                <li>
-                    <span class="li-title">Series: </span>
-                    <div>{{$comic['series']}}</div>
-                </li>
-                <li>
-                    <span class="li-title">U.S. Price: </span>
-                    <div>{{$comic['price']}}</div>
-                </li>
-                <li>
-                    <span class="li-title">On Sale Date: </span>
-                    <div>{{$comic['sale_date']}}</div>
-                </li>
-            </ul>
-        </div>
-
-    </div> --}}
-
-</div>
 
         
 @endsection
