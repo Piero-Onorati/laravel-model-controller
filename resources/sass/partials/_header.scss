@@ -1,0 +1,54 @@
+header{
+    background-color: $lighter;
+
+    .navigation-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .logo{
+            width:70px;
+            a{
+                img{
+                    width: 100%;
+                }
+            }
+        }
+
+        nav{
+            height:90px;
+            
+            li{
+            display: inline-block;
+            line-height: 87px;
+            margin: 0 8px;
+            
+                &:hover,
+                &.active{
+                    color:$primary;
+                    border-bottom:4px solid $primary;
+                }
+                a{
+                    display: inline-block;
+                    color: $dark;
+                    font-size:$fsize-sm;
+                    font-weight: $weight-font;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    &:hover,
+                    &.active{
+                        color:$primary;
+                    }
+                }
+            }
+        }
+
+        .input-box{
+            input{
+                border:none;
+                outline:none;
+                border-bottom:2px solid $primary;
+            }
+        }
+    }
+}

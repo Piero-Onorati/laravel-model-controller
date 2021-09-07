@@ -1,0 +1,131 @@
+.jumbotron{
+    height: 320px;
+    background-image: url('../img/jumbotron.jpg');
+    background-size: cover;
+}
+
+.spacer{
+    height: 70px;
+    background-color: $primary;
+}
+
+.small-container{
+    position: relative;
+
+    .detail_img_box{
+        width:160px;
+        position: absolute;
+        top:-260px;
+
+        img{
+            width:100%
+        }
+    }
+
+    .detail_info_box{
+        display: flex;
+        padding: 50px 0;
+
+        .detail_info{
+            width: calc(100% - 220px);
+            padding-right: 30px;
+        
+            h3{
+                text-transform: uppercase;
+                color:$navy_blue;
+                font-size: $fsize-lg;
+            }
+
+            .price-box{
+                width: 100%;
+                display: flex;
+                background-color: $green;
+                color: $light_green;
+                font-size: 16px;
+                margin: 15px 0 10px 0;
+                .price_book-available{
+                    width: calc(100% - 150px);
+                    padding: 8px 12px;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    border: 1px solid darkgreen;
+                    
+    
+                    .price{
+                        color:$lighter
+                    }
+    
+                    .available{
+                        text-transform: uppercase;
+                    }
+                }
+
+                .check-availability{
+                    width:150px;
+                    text-align: center;
+                    padding: 8px;
+                    border: 1px solid darkgreen;
+                }
+
+            }
+
+            p{
+                font-size: 15px;
+                line-height: 22px;
+            }
+        }
+
+        .adv{
+            width: 220px;
+            text-align: right;
+            .adv-title{
+                text-transform: uppercase;
+        
+            }
+            img{
+                width: 100%;
+            }
+        }
+    }
+   
+}
+
+.details_other_info{
+    background-color: $light_grey;
+    border-top: 1px solid lightgrey;
+    padding: 30px 0;
+
+    .details_other_info_box{
+        width: 800px;
+        margin: 0 auto;
+        display: flex;
+
+        .talent,
+        .spec{
+            width:50%;
+            padding: 0 10px;
+
+            h4{
+                color:$navy_blue;
+            }
+
+            ul{
+                list-style: none;
+
+                li{
+                    border-top:  1px solid lightgrey ;
+                    display: flex;
+                    padding: 10px 0;
+                    .li-title{
+                        color:$navy_blue;
+                        width:50%;
+                    }
+                }
+            }
+        }
+
+    
+    }
+
+}
