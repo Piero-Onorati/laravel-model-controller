@@ -14,40 +14,29 @@ use Illuminate\Support\Facades\Route;
 */
 
 // Route for HOME
-Route::get('/', function () {
-    return view('home');
-}) -> name('homepage');
+Route::get('/', 'HomeController@index'
+) -> name('homepage');
 
 // Route for CHARACTERS
-Route::get('/characters', function () {
-    return view('characters');
-}) -> name('characterspage');
+Route::get('/characters', 'HomeController@characters'
+) -> name('characterspage');
 
 // Route for COMICS
-Route::get('/comics', function () {
-    $data = ['allComics' => config('comics')];
-    return view('comics', $data);
-}) -> name('comicspage');
+Route::get('/comics', 'ProductController@products'
+) -> name('comicspage');
 
 // Route for DETAILS COMIC
-Route::get('/detail/{id}', function ($id) {
-    $books = config('comics');
-    $data = ['comic' => $books[$id]];
-    return view('detail', $data);
-}) -> name('detailpage');
-
+Route::get('/detail/{id}', 'ProductController@show'
+) -> name('detailpage');
 
 // Route for MOVIE
-Route::get('/movie', function () {
-    return view('movie');
-}) -> name('moviepage');
+Route::get('/movie', 'HomeController@movie'
+) -> name('moviepage');
 
 // Route for TV
-Route::get('/tv', function () {
-    return view('tv');
-}) -> name('tvpage');
+Route::get('/tv', 'HomeController@tv'
+) -> name('tvpage');
 
 // Route for EXAMPLE PAGE
-Route::get('/example', function () {
-    return view('example');
-}) -> name('examplepage');
+Route::get('/example', 'HomeController@example'
+) -> name('examplepage');
