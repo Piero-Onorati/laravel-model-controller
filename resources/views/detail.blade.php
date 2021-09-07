@@ -57,7 +57,7 @@
 
 <div class="details_other_info">
 
-    <div class="details_other_info_box">
+    {{-- <div class="details_other_info_box">
         <div class="talent">
             <h4>Talent</h4>
             <ul>
@@ -101,7 +101,7 @@
             </ul>
         </div>
 
-    </div>
+    </div> --}}
 
 </div>
 

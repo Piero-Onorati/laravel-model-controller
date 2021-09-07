@@ -15,7 +15,7 @@
         <span class="label">current series</span>
 
         <!-- Box with all the comics -->
-        @foreach ($allComics as $key => $comic)
+        @foreach ($allComics as $comic)
 
             <div class="card">
 
@@ -25,7 +25,7 @@
                 </div>
 
                 <!-- TITLE/LINK -->
-                <a class="book-name" href="{{route('detailpage',['id'=>$key])}}">{{$comic['title']}}</a>
+                <a class="book-name" href="{{route('detailpage',['id'=>$comic->id])}}">{{$comic['title']}}</a>
                 
             </div>
             
